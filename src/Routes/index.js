@@ -1,10 +1,11 @@
 import React from 'react'
 import { useRoutes } from 'react-router-dom'
 
+import Home from '../Pages/Home';
 const mainRoutes = [
   {
     path: '/',
-    element: <div>Home</div>,
+    element: <Home />,
   },
   {
     path: '/nft',
