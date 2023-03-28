@@ -20,6 +20,8 @@ const menuItems = ['Home', 'NFT', 'PITCH DECK', 'Search'];
 
 function TopBar(props) {
   const { window } = props;
+  const { selected } = props;
+  console.log(selected)
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleMenuToggle = () => {
@@ -27,7 +29,7 @@ function TopBar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleMenuToggle} sx={{ textAlign: 'center', backgroundColor: '#222', height:'100vh'}}>
+    <Box onClick={handleMenuToggle} sx={{ textAlign: 'center', backgroundColor: '#01001F', height:'100vh'}}>
       {/* <Divider /> */}
       <List>
         {menuItems.map((item) => (
@@ -54,12 +56,12 @@ function TopBar(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
+    <Box sx={{ display: 'flex', height:{ xs:'64px', sm :'64px', md:'64px'},  }}>
       <AppBar component="nav" 
         sx={{
-          backgroundColor : "#222", 
-          padding : { md:"0 30px", xs:"0 10px"} }}>
+          backgroundColor : "#01001F", 
+          padding : { md:"0 30px", xs:"0 10px"},
+          height:{ sm :'64px', md:'64px'} }}>
         <Toolbar>
           <Box
             component="img"
@@ -73,13 +75,27 @@ function TopBar(props) {
             align='left'
             sx={{ flexGrow: 1 }}
           />
-          <Box sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
-            {menuItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff', height: '64px' }}>
+          <Box sx={{ display: { xs: 'none', sm: 'none', md: 'block', fontWeight:'bold' } }}>
+            {menuItems.map((item, index) => (
+              <Button key={index}
+                sx={ 
+                  index == selected ? 
+                  { color: '#00e0ff', height: '64px', fontWeight:'bold', margin:'0 10px' } 
+                  :
+                  { color: '#fff', height: '64px', fontWeight:'bold', margin:'0 10px' }
+                }
+              >
                 {item}
               </Button>
             ))}
-            <Button sx={{ color: '#fff', height: '64px', background : 'linear-gradient(260.52deg,#0026f4 -25.59%,rgba(0,249,255,0) 143.07%)' }}>
+            <Button
+              sx={{ 
+                color: '#fff', 
+                height: '64px', 
+                background : 'linear-gradient(260.52deg,#0026f4 -25.59%,rgba(0,249,255,0) 143.07%)',
+                fontWeight:'bold',
+                margin:'0 10px' }}
+            >
               CONNECT TO WALLET
             </Button>
           </Box>
@@ -120,10 +136,6 @@ function TopBar(props) {
 }
 
 TopBar.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 };
 
