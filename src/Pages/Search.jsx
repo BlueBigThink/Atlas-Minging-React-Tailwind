@@ -13,7 +13,7 @@ function Search() {
             <div className="flex flex-col items-center">
               <img alt="" className="w-[80%] lg:w-fit" src={LogoHero}/>
               <div className="cut-tl-edge p-[3px] bg-blue-700 w-full max-w-sx relative">
-                <div className='cute-tl-edge px-4 py-3 gradient-black-blue w-full stan-font text-center text-1'>
+                <div className='cut-tl-edge px-4 py-3 gradient-black-blue w-full stan-font text-center text-1'>
                   <div className='flex flex-row gap-2'>
                     <input className="flex-1 w-full text-white px-3 bg-transparent focus:outline-none text-center" value="1"/>
                     <button className="shrink-0 cut-tl-br-button px-2 py-1 bg-gradient-to-b from-blue-900 to-blue-500">
