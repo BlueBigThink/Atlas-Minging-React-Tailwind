@@ -156,3 +156,12 @@
 .middle:nth-child(9) {
   transform: translateZ(9px);
 }
+
+@keyframes spins {
+  0%{
+     transform: rotateY(0deg)
+    }
+ 100%{
+     transform: rotateY(360deg)
+    }
+ }
