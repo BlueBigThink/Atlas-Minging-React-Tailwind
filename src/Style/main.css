@@ -18,6 +18,30 @@
   -webkit-clip-path: polygon(45% 85%,83% 85%,100% 100%,75% 100%,0 100%,0 36px,25% 36px);
 }
 
+.cut-tl-edge {
+  clip-path: polygon(30px 0,100% 0,100% 100%,0 100%,0 22px);
+  -webkit-clip-path: polygon(30px 0,100% 0,100% 100%,0 100%,0 22px);
+}
+
+.cut-tl-br-button {
+  clip-path: polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px);
+  -webkit-clip-path: polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px);
+}
+
+.max-w-sx {
+  max-width: 20rem;
+}
+.bg-blue-700 {
+  --tw-bg-opacity: 1;
+    background-color: rgb(29 78 216/var(--tw-bg-opacity));
+}
+
+.stan-font {
+  font-family: Poppins;
+  font-weight: 700;
+  color: #fff;
+}
+
 .nft-bg {
   background-image: url('../Assets/nft-bg.png');
   background-repeat : no-repeat;
@@ -25,6 +49,26 @@
   background-attachment: fixed;
   color : white;
 }
+
+.bg-ellipse {
+  background-image: url('../Assets/hero-ellipse.png');
+  background-repeat : no-repeat;
+  background-size: cover;
+}
+
+.bg-hero-1 {
+  background-image: url('../Assets/hero-bg-1.png');
+  background-repeat : no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.bg-hero-2 {
+  background-image: url('../Assets/hero-bg-2.png');
+  background-repeat : no-repeat;
+  background-size: cover;
+}
+
 .gradient-blue-teal, .gradient-red-blood {
   background-image: linear-gradient(to right,var(--tw-gradient-stops));
 }
@@ -71,4 +115,44 @@
 
 .bg-coin-5000 {
   background-image: url('../Assets/5000.png');
+}
+
+.nft {
+  transform-style: preserve-3d;
+  animation: spins 2.5s linear infinite;
+}
+
+.front, .middle {
+  position: absolute;
+  top: 0;
+}
+.front {
+  transform: translateZ(10px);
+}
+.middle {
+  transform: translateZ(1px);
+}
+.middle:nth-child(2) {
+  transform: translateZ(2px);
+}
+.middle:nth-child(3) {
+  transform: translateZ(3px);
+}
+.middle:nth-child(4) {
+  transform: translateZ(4px);
+}
+.middle:nth-child(5) {
+  transform: translateZ(5px);
+}
+.middle:nth-child(6) {
+  transform: translateZ(6px);
+}
+.middle:nth-child(7) {
+  transform: translateZ(7px);
+}
+.middle:nth-child(8) {
+  transform: translateZ(8px);
+}
+.middle:nth-child(9) {
+  transform: translateZ(9px);
 }

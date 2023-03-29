@@ -11,10 +11,22 @@ const NftItem = (props) => {
       <div className="group w-[20rem] flex flex-col">
         <div className="z-[1] bg-[#0026F4] bg-gradient-to-t from-[#0B50A0] to-[#000533]/0 group-hover:from-[#00E0FF] group-hover:to-[#00E0FF] cut-edge p-[2px] w-full relative">
           <div className="bg-[#000533] bg-gradient-to-t from-[#0062F4]/50 via-[#0062F4]/30 to-[#000000]/0 py-8 px-8 cut-edge w-full flex flex-col items-center relative">
-            <img class="z-[1] right-0 top-0 absolute" alt="" src={TrBorder}/>
-            <img class="z-[2] right-2 top-2 absolute" alt="" src={Info}/>
-            <img class="z-[1] left-0 bottom-0 absolute" alt="" src={BlBorder}/>
-            <div className={`bg-coin-${item.coin} bg-cover h-40 w-40`}></div>
+            <img className="z-[1] right-0 top-0 absolute" alt="" src={TrBorder}/>
+            <img className="z-[2] right-2 top-2 absolute" alt="" src={Info}/>
+            <img className="z-[1] left-0 bottom-0 absolute" alt="" src={BlBorder}/>
+            <div className={`bg-coin-${item.coin} bg-cover h-40 w-40 group-hover:hidden`}></div>
+            <div className='hidden h-40 w-40 group-hover:block nft'>
+              <div className={`bg-coin-${item.coin} bg-cover h-full w-full`}></div>
+              <div className={`bg-coin-${item.coin} bg-cover h-full w-full middle`}></div>
+              <div className={`bg-coin-${item.coin} bg-cover h-full w-full middle`}></div>
+              <div className={`bg-coin-${item.coin} bg-cover h-full w-full middle`}></div>
+              <div className={`bg-coin-${item.coin} bg-cover h-full w-full middle`}></div>
+              <div className={`bg-coin-${item.coin} bg-cover h-full w-full middle`}></div>
+              <div className={`bg-coin-${item.coin} bg-cover h-full w-full middle`}></div>
+              <div className={`bg-coin-${item.coin} bg-cover h-full w-full middle`}></div>
+              <div className={`bg-coin-${item.coin} bg-cover h-full w-full middle`}></div>
+              <div className={`bg-coin-${item.coin} bg-cover h-full w-full front`}></div>
+            </div>
           </div>
         </div>
         <div className="flex-1 flex -translate-y-10 bg-gradient-to-b from-[#000533] to-[#0B50A0] p-[2px] group-hover:from-[#00E0FF] group-hover:to-[#00E0FF] w-full">
@@ -23,11 +35,21 @@ const NftItem = (props) => {
             {item.name}
           </p>
           <div className="cursor-pointer cut-edge-button w-48 p-[2px] drop-shadow-2xl bg-[#0026F4] bg-gradient-to-t from-[#000000]/80 via-[#000000]/50 to-[#0026F4] group-hover:from-[#00E0FF] group-hover:via-[#00E0FF] group-hover:to-[#00E0FF]">
-            <button disabled={`${item.disabled ? '' : 'false'}`} className="cut-edge-button w-full py-2 bg-gradient-to-b from-[#0026F4]/0 via-[#089DB1]/50 to-[#089DB1] disabled:from-gray-900 disabled:via-gray-700 disabled:to-gray-500">
-              <p className="text-white font-bold text-3xl text-center">
-                BUY
-              </p>
-            </button>
+            {/* <button disabled={`${item.disabled ? '' : 'false'}`} className="cut-edge-button w-full py-2 bg-gradient-to-b from-[#0026F4]/0 via-[#089DB1]/50 to-[#089DB1] disabled:from-gray-900 disabled:via-gray-700 disabled:to-gray-500"> */}
+            {
+              item.disabled ?
+              <button disabled className="cut-edge-button w-full py-2 bg-gradient-to-b from-[#0026F4]/0 via-[#089DB1]/50 to-[#089DB1] disabled:from-gray-900 disabled:via-gray-700 disabled:to-gray-500">
+                <p className="text-white font-bold text-3xl text-center">
+                  BUY
+                </p>
+              </button>
+              :
+              <button className="cut-edge-button w-full py-2 bg-gradient-to-b from-[#0026F4]/0 via-[#089DB1]/50 to-[#089DB1] disabled:from-gray-900 disabled:via-gray-700 disabled:to-gray-500">
+                <p className="text-white font-bold text-3xl text-center">
+                  BUY
+                </p>
+              </button>
+            }
           </div>
           </div>
         </div>

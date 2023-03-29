@@ -3,6 +3,7 @@ import { useRoutes } from 'react-router-dom'
 
 import Home from '../Pages/Home';
 import NFT from '../Pages/NFT';
+import Search from '../Pages/Search';
 
 const mainRoutes = [
   {
@@ -22,6 +23,10 @@ const mainRoutes = [
         element: <div>NFT Detail</div>,
       },
     ],
+  },
+  {
+    path: '/search',
+    element: <Search />,
   },
 ];
 

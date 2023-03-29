@@ -14,9 +14,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Logo from "../Assets/atlas-logo-white.png"
-const drawerWidth = 240;
+const drawerWidth = '400px';
 const menuItems = ['Home', 'NFT', 'PITCH DECK', 'Search'];
-const linkTo = ['/', '/nft'];
+const linkTo = ['/', '/nft', '/', '/search'];
 
 function TopBar(props) {
   const navigate = useNavigate();
@@ -27,36 +27,45 @@ function TopBar(props) {
   const handleMenuToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+  
+  const handleMenu = (e) => {
+    const id = parseInt(e.target.value);
+    navigate(linkTo[id]);
+  }
 
   const drawer = (
-    <Box onClick={handleMenuToggle} sx={{ textAlign: 'center', backgroundColor: '#01001F', height:'100vh'}}>
+    <Box onClick={handleMenuToggle} sx={{ textAlign: 'center', backgroundColor: '#01001F', height:'100vh', padding:'50px'}}>
       {/* <Divider /> */}
       <List>
-        {menuItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center', color:'white' }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
+        {menuItems.map((item, index) => (
+          <ListItem key={item}>
+            <Button 
+              sx={
+                index == selected ? 
+                { color: '#00e0ff', fontWeight:'bold', textAlign:'center', width:'100%'}
+                :
+                { color: '#fff', fontWeight:'bold', textAlign:'center', width:'100%'}
+              }
+              value={index} 
+              onClick={handleMenu}
+            >
+              {item}
+            </Button>
           </ListItem>
         ))}
-        <ListItem disablePadding>
+        <ListItem>
           <ListItemButton 
             sx={{ 
               textAlign: 'center', 
               color:'white',  
               background : 'linear-gradient(260.52deg,#0026f4 -25.59%,rgba(0,249,255,0) 143.07%)'
             }}>
-            <ListItemText primary="CONNECT TO WALLET" />
+            <Typography sx={{fontWeight:'bold', textAlign:'center', width:'100%'}}>CONNECT TO WALLET</Typography>
           </ListItemButton>
         </ListItem>
       </List>
     </Box>
   );
-
-  const handleMenu = (e) => {
-    const id = parseInt(e.target.value);
-    navigate(linkTo[id]);
-  }
 
   const container = window !== undefined ? () => window().document.body : undefined;
 

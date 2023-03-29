@@ -1,10 +1,5 @@
 import React from 'react';
 import TopBar from '../Components/TopBar';
-import { 
-  Box,
-  Container,
-  Grid
-} from '@mui/material';
 import NftItem from '../Components/NftItem';
 
 import Coin100 from '../Assets/100.png';
@@ -13,7 +8,6 @@ import Coin500 from '../Assets/500.png';
 import Coin1000 from '../Assets/1000.png';
 import Coin3000 from '../Assets/3000.png';
 import Coin5000 from '../Assets/5000.png';
-import NFTBG from '../Assets/nft-bg.png';
 
 const nftlist = [
   {
@@ -79,7 +73,7 @@ function NFT() {
             {
               nftlist.map((nft, index) => {
                 return(
-                    <NftItem item={nft}/>
+                    <NftItem key={index} item={nft}/>
                 )
               })
             }
