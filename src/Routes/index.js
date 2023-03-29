@@ -2,6 +2,8 @@ import React from 'react'
 import { useRoutes } from 'react-router-dom'
 
 import Home from '../Pages/Home';
+import NFT from '../Pages/NFT';
+
 const mainRoutes = [
   {
     path: '/',
@@ -9,11 +11,11 @@ const mainRoutes = [
   },
   {
     path: '/nft',
-    element: <div>NFT</div>,
+    element: <NFT />,
     children: [
       {
         index: true,
-        element: <div>NFT</div>,
+        element: <NFT />,
       },
       {
         path: '/nft/detail/:id',

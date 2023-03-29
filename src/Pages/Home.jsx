@@ -33,7 +33,7 @@ function Home() {
           <div className='overflow-x-hidden mx-auto w-full flex-1'>
             <div className="flex flex-col items-center">
               <img alt="" className="w-[80%] lg:w-fit" src={LogoHero}/>
-              <p class="py-2 text-white -translate-y-8 lg:-translate-y-16 font-bold text-2xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-t from-[#8ECCFB] to-white">
+              <p className="py-2 -translate-y-8 lg:-translate-y-16 font-bold text-2xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-t from-[#8ECCFB] to-white">
                 Pushing one step further
               </p>
               <Box

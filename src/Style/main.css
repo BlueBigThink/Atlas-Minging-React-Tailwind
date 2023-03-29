@@ -1,0 +1,28 @@
+.cut-edge {
+  -webkit-clip-path: polygon(40px 0,100% 0,100% calc(100% - 40px),calc(100% - 40px) 100%,0 100%,0 40px);
+  clip-path: polygon(40px 0,100% 0,100% calc(100% - 40px),calc(100% - 40px) 100%,0 100%,0 40px);
+}
+
+.bg-coin-100 {
+  background-image: url('../Assets/100.png');
+}
+
+.bg-coin-200 {
+  background-image: url('../Assets/200.png');
+}
+
+.bg-coin-500 {
+  background-image: url('../Assets/500.png');
+}
+
+.bg-coin-1000 {
+  background-image: url('../Assets/1000.png');
+}
+
+.bg-coin-3000 {
+  background-image: url('../Assets/3000.png');
+}
+
+.bg-coin-5000 {
+  background-image: url('../Assets/500.png');
+}

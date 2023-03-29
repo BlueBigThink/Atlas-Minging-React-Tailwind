@@ -1,9 +1,8 @@
 import * as React from 'react';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
@@ -17,11 +16,12 @@ import Button from '@mui/material/Button';
 import Logo from "../Assets/atlas-logo-white.png"
 const drawerWidth = 240;
 const menuItems = ['Home', 'NFT', 'PITCH DECK', 'Search'];
+const linkTo = ['/', '/nft'];
 
 function TopBar(props) {
+  const navigate = useNavigate();
   const { window } = props;
   const { selected } = props;
-  console.log(selected)
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleMenuToggle = () => {
@@ -53,6 +53,11 @@ function TopBar(props) {
     </Box>
   );
 
+  const handleMenu = (e) => {
+    const id = parseInt(e.target.value);
+    navigate(linkTo[id]);
+  }
+
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
@@ -77,13 +82,14 @@ function TopBar(props) {
           />
           <Box sx={{ display: { xs: 'none', sm: 'none', md: 'block', fontWeight:'bold' } }}>
             {menuItems.map((item, index) => (
-              <Button key={index}
+              <Button key={index} value={index}
                 sx={ 
                   index == selected ? 
                   { color: '#00e0ff', height: '64px', fontWeight:'bold', margin:'0 10px' } 
                   :
                   { color: '#fff', height: '64px', fontWeight:'bold', margin:'0 10px' }
                 }
+                onClick={handleMenu}
               >
                 {item}
               </Button>
