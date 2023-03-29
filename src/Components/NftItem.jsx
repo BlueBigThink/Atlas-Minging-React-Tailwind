@@ -23,7 +23,7 @@ const NftItem = (props) => {
             {item.name}
           </p>
           <div className="cursor-pointer cut-edge-button w-48 p-[2px] drop-shadow-2xl bg-[#0026F4] bg-gradient-to-t from-[#000000]/80 via-[#000000]/50 to-[#0026F4] group-hover:from-[#00E0FF] group-hover:via-[#00E0FF] group-hover:to-[#00E0FF]">
-            <button disabled={`${item.disabled ? '' : 'true'}`} className="cut-edge-button w-full py-2 bg-gradient-to-b from-[#0026F4]/0 via-[#089DB1]/50 to-[#089DB1] disabled:from-gray-900 disabled:via-gray-700 disabled:to-gray-500">
+            <button disabled={`${item.disabled ? '' : 'false'}`} className="cut-edge-button w-full py-2 bg-gradient-to-b from-[#0026F4]/0 via-[#089DB1]/50 to-[#089DB1] disabled:from-gray-900 disabled:via-gray-700 disabled:to-gray-500">
               <p className="text-white font-bold text-3xl text-center">
                 BUY
               </p>

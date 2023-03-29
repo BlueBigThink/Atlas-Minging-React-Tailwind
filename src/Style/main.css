@@ -7,6 +7,48 @@
   -webkit-clip-path: polygon(20px 0,100% 0,100% calc(100% - 20px),calc(100% - 20px) 100%,0 100%,0 20px);
   clip-path: polygon(20px 0,100% 0,100% calc(100% - 20px),calc(100% - 20px) 100%,0 100%,0 20px);
 }
+
+.cut-tl-br {
+  clip-path: polygon(20px 0,100% 0,100% calc(100% - 20px),calc(100% - 20px) 100%,0 100%,0 20px);
+  -webkit-clip-path: polygon(20x 0,100% 0,100% calc(100% - 20px),calc(100% - 20px) 100%,0 100%,0 20px);
+}
+
+.cut-tl-edge-design {
+  clip-path: polygon(45% 85%,83% 85%,100% 100%,75% 100%,0 100%,0 36px,25% 36px);
+  -webkit-clip-path: polygon(45% 85%,83% 85%,100% 100%,75% 100%,0 100%,0 36px,25% 36px);
+}
+
+.nft-bg {
+  background-image: url('../Assets/nft-bg.png');
+  background-repeat : no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color : white;
+}
+.gradient-blue-teal, .gradient-red-blood {
+  background-image: linear-gradient(to right,var(--tw-gradient-stops));
+}
+
+.gradient-blue-teal {
+  --tw-gradient-from: #1d4ed8;
+  --tw-gradient-to: rgba(29,78,216,0);
+  --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to);
+  --tw-gradient-to: rgba(0,224,255,0);
+  --tw-gradient-stops: var(--tw-gradient-from),#00e0ff,var(--tw-gradient-to);
+  --tw-gradient-to: #00e0ff;
+}
+
+.gradient-black-blue {
+  --tw-gradient-from: rgba(0,0,0,.6);
+  --tw-gradient-to: transparent;
+  --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to);
+  --tw-gradient-to: #1d4ed8;
+}
+
+.gradient-black-blue {
+  background-image: linear-gradient(to bottom,var(--tw-gradient-stops));
+}
+
 .bg-coin-100 {
   background-image: url('../Assets/100.png');
 }
