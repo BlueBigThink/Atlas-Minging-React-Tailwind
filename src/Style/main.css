@@ -3,6 +3,10 @@
   clip-path: polygon(40px 0,100% 0,100% calc(100% - 40px),calc(100% - 40px) 100%,0 100%,0 40px);
 }
 
+.cut-edge-button {
+  -webkit-clip-path: polygon(20px 0,100% 0,100% calc(100% - 20px),calc(100% - 20px) 100%,0 100%,0 20px);
+  clip-path: polygon(20px 0,100% 0,100% calc(100% - 20px),calc(100% - 20px) 100%,0 100%,0 20px);
+}
 .bg-coin-100 {
   background-image: url('../Assets/100.png');
 }
@@ -24,5 +28,5 @@
 }
 
 .bg-coin-5000 {
-  background-image: url('../Assets/500.png');
+  background-image: url('../Assets/5000.png');
 }
