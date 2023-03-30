@@ -42,9 +42,27 @@ function TopBar(props) {
             <Button 
               sx={
                 index == selected ? 
-                { color: '#00e0ff', fontWeight:'bold', textAlign:'center', width:'100%'}
+                { color: '#00e0ff',
+                  borderRadius:0,
+                  margin:'auto',
+                  borderBottom: '2px solid transparent',
+                  '&:hover': {
+                    borderBottomColor: 'red',
+                  },
+                  fontWeight:'bold', 
+                  textAlign:'center', 
+                  }
                 :
-                { color: '#fff', fontWeight:'bold', textAlign:'center', width:'100%'}
+                { color: '#fff', 
+                  borderRadius:0,
+                  margin:'auto',
+                  borderBottom: '2px solid transparent',
+                  '&:hover': {
+                    borderBottomColor: 'red',
+                  },
+                  fontWeight:'bold', 
+                  textAlign:'center', 
+                  }
               }
               value={index} 
               onClick={handleMenu}
