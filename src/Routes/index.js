@@ -5,6 +5,7 @@ import Home from '../Pages/Home';
 import NFT from '../Pages/NFT';
 import Search from '../Pages/Search';
 
+//This is start
 const mainRoutes = [
   {
     path: '/',
